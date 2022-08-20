@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet"
+    integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js"
+    integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF"
+    crossorigin="anonymous"></script>
+  <title>Orange</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 1000px;
+      margin-left: 500px;
+    }
+
+    #carouselExampleSlidesOnly img {
+      height: 800px;
+    }
+
+    #carouselExampleSlidesOnly {
+      width: 500px;
+      position: fixed;
+      top: 0;
+    }
+
+    .navbar {
+      border-bottom: 2px solid;
+      font-family: HelvNeueOrange, "Helvetica Neue", Helvetica, Arial,
+        "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .navbar ul {
+      margin-top: 30px;
+    }
+
+    .navbar ul li {
+      margin-left: -20px;
+      font-size: 15px;
+    }
+
+    .navbar a:hover {
+      color: #ff7900;
+    }
+
+    form {
+      width: 450px;
+      margin: 40px auto;
+    }
+
+    form h1 {
+      margin-bottom: 30px;
+    }
+
+    span {
+      color: red;
+    }
+
+    .form-text {
+      font-size: 13px;
+      color: black;
+    }
+
+    .form-check-input {
+      font-size: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .se {
+      background-color: white;
+      border-color: #000;
+    }
+
+    .se:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    #emailError,
+    #mobileError,
+    #passwordError,
+    #checkError,
+    #check2Error {
+      display: block;
+      width: 100%;
+      margin-top: 0.625rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    .input-group-addon i {
+      margin-left: 410px;
+      margin-bottom: 40px;
+      cursor: pointer;
+      z-index: 200;
+      position: absolute;
+      font-size: large;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="brand" href="#">
+          <img src="logo (1).png" width="280" height="70" role="img" alt="Boosted" />
+        </a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <form name="RegForm">
+      <h1>Create an account</h1>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address <span>*</span></label>
+        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" name="Email" />
+        <div id="emailHelp" class="form-text">eg: username@domain.com</div>
+        <span id="emailError">
+          <strong> </strong>
+        </span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputmobile1" class="form-label">Mobile <span>*</span></label>
+        <input type="text" class="form-control" id="exampleInputmobile" name="mobile" />
+
+        <div id="mobilelHelp" class="form-text">eg: 077********</div>
+        <span id="mobileError">
+          <strong> </strong>
+        </span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Create Password <span>*</span></label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+        <div class="input-group-addon">
+          <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+        <span id="passwordError"> </span>
+        <div id="mobilelHelp" class="form-text">
+          The Password should be between 6-18 characters.
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">I agree to the <u>terms & conditions</u> Orange.
+          <span> *</span></label>
+        <span id="checkError">
+          <strong> </strong>
+        </span>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck2" />
+        <label class="form-check-label" for="exampleCheck2">Receive Coding Academy Newsletter.
+        </label>
+        <span id="check2Error">
+          <strong> </strong>
+        </span>
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnn">Sign Up</button>
+      <button type="button" class="btn btn-primary se">
+        <a href="page2.html"> Already have an account?login</a>
+      </button>
+    </form>
+  </div>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://media.discordapp.net/attachments/887210767651319861/899562577414221925/2.jpg?width=358&height=592"
+          class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://media.discordapp.net/attachments/887210767651319861/899562612008841216/1.jpg?width=358&height=592"
+          class="d-block w-100" alt="..." />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var email = document.getElementById("InputEmail");
+    var mobile = document.getElementById("exampleInputmobile");
+    var password = document.getElementById("exampleInputPassword1");
+    var checkBox = document.getElementById("exampleCheck1");
+    var mybtn = document.getElementById("btnn");
+
+    mybtn.addEventListener("click", () => {
+      if (email.value == "") {
+        document.getElementById("emailError").innerHTML =
+          "The email field is required.";
+      }
+
+      if (
+        /^[A-ZA-z0-9._-]+@(hotmail|gmail|yahoo).com$/.test(email.value) ==
+        false &&
+        email.value !== ""
+      ) {
+        document.getElementById("emailError").innerHTML =
+          "The email must be a valid email address.";
+
+        window.localStorage.setItem("email", email.value);
+      }
+
+      if (
+        /077[0-9]{7}/gm.test(mobile.value) == false &&
+        mobile.value !== ""
+      ) {
+        document.getElementById("mobileError").innerHTML = " orange number";
+      }
+      if (mobile.value == "") {
+        document.getElementById("mobileError").innerHTML =
+          "The mobile field is required.";
+      }
+      if (password.value == "") {
+        document.getElementById("passwordError").innerHTML =
+          "The password field is required.";
+      }
+      if (checkBox.checked == false) {
+        document.getElementById("checkError").innerHTML =
+          "The Terms & Conditions Not Checked";
+      }
+
+      mybtn.addEventListener("blur", () => {
+        if (checkBox.checked == false) {
+          document.getElementById("checkError").innerHTML =
+            "The Terms & Conditions Not Checked";
+        }
+      });
+
+
+
+
+
+
+
+      if (email.value !== "" && password.value !== "") {
+
+        var data = window.localStorage.getItem("data");
+
+        if (data) {
+          
+          //  i used Josn.parse to convet string to array to make push with new data from new user
+
+          data = JSON.parse(data);
+
+          //  i used array for not overwrriting old data
+
+          data.push([email.value, password.value]);
+
+        } else {
+
+
+          var data = [];
+          data.push([email.value, password.value]);
+        }
+
+        //  i use JSON.stringify to convert array to string
+
+        window.localStorage.setItem("data", JSON.stringify(data));
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>
